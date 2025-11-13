@@ -1,0 +1,87 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String       @id @default(uuid())
+  name         String?
+  email        String       @unique
+  password     String
+  ageGroup     String?
+  university   String?
+  createdAt    DateTime     @default(now())
+
+  moodEntries   MoodEntry[]
+  tasks         Task[]
+  messages      Message[]
+  appointments  Appointment[]
+  communities   CommunityMember[]
+}
+
+model MoodEntry {
+  id        String   @id @default(cuid())
+  mood      String
+  note      String?
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Task {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  completed   Boolean  @default(false)
+  dueDate     DateTime?
+  createdAt   DateTime @default(now())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model Community {
+  id          String            @id @default(cuid())
+  slug        String            @unique
+  name        String
+  description String?
+  createdAt   DateTime          @default(now())
+  members     CommunityMember[]
+  messages    Message[]
+}
+
+model CommunityMember {
+  id          String    @id @default(cuid())
+  role        String    @default("member")
+  joinedAt    DateTime  @default(now())
+  userId      String
+  communityId String
+  user        User      @relation(fields: [userId], references: [id])
+  community   Community @relation(fields: [communityId], references: [id])
+
+  @@unique([userId, communityId])
+}
+
+model Message {
+  id          String    @id @default(cuid())
+  content     String
+  createdAt   DateTime  @default(now())
+  userId      String
+  communityId String
+  user        User      @relation(fields: [userId], references: [id])
+  community   Community @relation(fields: [communityId], references: [id])
+}
+
+model Appointment {
+  id          String    @id @default(cuid())
+  title       String
+  with        String
+  reason      String?
+  when        DateTime
+  createdAt   DateTime  @default(now())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+}
