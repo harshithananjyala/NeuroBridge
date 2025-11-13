@@ -97,3 +97,17 @@ src/app
  ├── api/            # Server APIs
  └── neuro-play/     # Experimental tests
 
+📌 Project Status
+
+Actively being built for the Arizona AI Challenge.
+New features and refinements coming soon.
+
+👩‍💻 Team
+
+NeuroBridge — Arizona State University
+(Add your team members here)
+
+📄 License
+
+MIT License.
+Feel free to contribute, fork, or extend the project.
