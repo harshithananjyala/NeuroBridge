@@ -1,4 +1,5 @@
-NeuroBridge: AI-Powered Neurodiversity Support PlatformNeuroBridge is an empathetic, adaptive AI assistant designed to support neurodiverse individuals—students, professionals, and
+NeuroBridge: AI-Powered Neurodiversity Support Platform
+NeuroBridge is an empathetic, adaptive AI assistant designed to support neurodiverse individuals—students, professionals, and
 young adults—through personalized planning, emotional insight, and conversational guidance.
 Built for the Arizona AI Challenge, the platform prioritizes usability, comfort, and neuro-inclusive design.
 "A companion that listens first—forms later."Key FeaturesAI Companion: A friendly, conversational agent that replaces rigid questionnaires with talk-first interaction.
