@@ -82,7 +82,7 @@ neurobridge/
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/your-username/neurobridge.git](https://github.com/your-username/neurobridge.git)
+    git clone https://github.com/harshithananjyala/NeuroBridge.git
     cd neurobridge
     ```
 
