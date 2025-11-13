@@ -1,47 +1,99 @@
-NeuroBridge: AI-Powered Neurodiversity Support Platform
-NeuroBridge is an empathetic, adaptive AI assistant designed to support neurodiverse individuals—students, professionals, and
-young adults—through personalized planning, emotional insight, and conversational guidance.
-Built for the Arizona AI Challenge, the platform prioritizes usability, comfort, and neuro-inclusive design.
-"A companion that listens first—forms later."Key FeaturesAI Companion: A friendly, conversational agent that replaces rigid questionnaires with talk-first interaction.
-Intelligent Planner: Automatically generates personalized plans based on the user’s stress, mood, and current workload.
-Mood Tracking: Tracks emotional patterns and provides soft recommendations that support wellbeing.
-Community Space: A safe place for guided prompts, shared reflections, and supportive posts.
-Calming UI/UX: Soft visual flow, low cognitive load, and a design tailored for neurodiverse comfort.
-Problem StatementTechnology often lacks empathy. Neurodiverse individuals face interfaces that overwhelm, confuse, or ignore their cognitive language.
-NeuroBridge transforms this experience by creating an adaptive, emotionally aware ecosystem that: listens, learns and evolves with every unique mind.
-End Users
-Students experiencing stress or burnoutIndividuals with ADHD, autism spectrum traits, or anxiety
-People who prefer conversational interaction over formsAnyone seeking a supportive digital companion
-Tech StackLayer
-Tools
-FrontendNext.js 14, React 18, Tailwind CSSBackendNext.js API Routes, Node.js
-Database:PostgreSQL + Prisma ORMAuthNextAuth (Credential Provider)AIOpenAI APIMiscSocket server (optional), modern UI components
-Authentication: Secure login/signup using NextAuth (Credentials), Prisma ORM, and PostgreSQL.Project Structureneurobridge/
-│── prisma/
-│── public/
-│── src/
-│   ├── app/
-│   │   ├── auth/
-│   │   ├── companion/
-│   │   ├── planner/
-│   │   ├── mood/
-│   │   ├── community/
-│   │   ├── consult/
-│   │   ├── appointments/
-│   │   └── api/auth/[...nextauth]
-│   ├── components/
-│   └── styles/
-│── package.json
-│── README.md
-Installation & SetupClone the repositoryBashgit clone https://github.com/your-username/neurobridge.git
-cd neurobridge
-Install dependenciesBashnpm install
-Configure your environment
-Create a .env file:DATABASE_URL=your_postgres_url
-NEXTAUTH_SECRET=your_secret
-OPENAI_API_KEY=your_key
-Generate Prisma ClientBashnpx prisma generate
-Run dev serverBash
-npm run dev
-Run with Socket (for real-time features)Bash
-npm run dev:all
+🧠 NeuroBridge
+AI-Powered Neurodiversity Support Platform
+
+NeuroBridge is an empathetic, adaptive AI assistant designed to support neurodiverse individuals through a calming, conversational interface. Developed for the Arizona AI Challenge, the platform focuses on reducing cognitive load and helping users manage stress, planning, emotions, and daily routines with ease.
+
+“A companion that listens first—forms later.”
+
+✨ Features
+🤝 AI Companion
+
+A natural, talk-first conversational agent that replaces overwhelming questionnaires with supportive dialogue.
+
+🗓️ Intelligent Planner
+
+Auto-generates personalized plans based on the user's mood, workload, stress level, and ongoing conversation.
+
+😊 Mood Tracking
+
+Allows users to record and reflect on their emotional patterns over time.
+
+🌐 Community Space
+
+A safe, guided space for sharing reflections and engaging with supportive prompts.
+
+🔐 Authentication
+
+Secure login & signup with:
+
+NextAuth (Credentials)
+
+Prisma ORM
+
+PostgreSQL
+
+🎨 Neuro-Inclusive UI/UX
+
+Soft visuals, minimal cognitive load, simple navigation, and a flow designed for comfort.
+
+🧩 Problem Statement
+
+Technology often prioritizes speed over empathy.
+Neurodiverse individuals—students, young adults, and professionals—frequently struggle with:
+
+Overwhelming interfaces
+
+Rigid forms and questionnaires
+
+High emotional load during stressful moments
+
+Difficulty organizing tasks when anxious or overloaded
+
+NeuroBridge solves this by offering a conversational, adaptive ecosystem that listens and supports users based on their cognitive language.
+
+👥 End Users
+
+NeuroBridge is built for:
+
+Neurodiverse students
+
+Young professionals
+
+Individuals with ADHD, autism spectrum conditions, or executive-function challenges
+
+Anyone who prefers conversational, intuitive digital tools
+
+💡 Our Solution
+
+A single platform that brings together:
+
+AI conversation
+
+Mood awareness
+
+Personalized planning
+
+Community reflection
+
+Neuro-inclusive UI
+
+NeuroBridge listens, learns, and evolves with every user.
+
+🛠️ Tech Stack
+
+Frontend: Next.js, React, TypeScript, Tailwind CSS
+Backend: Node.js, NextAuth, Prisma
+AI Integration: OpenAI API
+Database: PostgreSQL
+Deployment: (Add your platform — Vercel, Render, etc.)
+
+src/app
+ ├── auth/           # Login & Signup
+ ├── companion/      # AI chat interface
+ ├── planner/        # Smart planning
+ ├── mood/           # Mood tracker UI
+ ├── community/      # Community space
+ ├── consult/        # Extra modules
+ ├── api/            # Server APIs
+ └── neuro-play/     # Experimental tests
+
